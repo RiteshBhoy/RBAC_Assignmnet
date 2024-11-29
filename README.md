@@ -453,13 +453,31 @@ Step 6: Testing Edge Cases
 Case A: Try accessing a protected route without a token
 Go to the User Profile endpoint (/api/users/profile).
 Do not include the Authorization Header.
+
+
+
 Click Send.
+
+
+
 You should see this response:
 json
+
+
 Copy code
 {
   "message": "Not authorized, no token"
 }
+
+
+
+
+
+
+
+
+
+
 Case B: Try accessing the Admin route with a non-admin token
 Use the token from a User role.
 Go to the Admin route (/api/users/admin) and send the request.
